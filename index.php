@@ -11,9 +11,8 @@
             while ($colonne = mysqli_fetch_assoc($moyenneInf_run)){
                 $result_moyinfo = $colonne['moyinfo'];
     
-      //listing moyenne  info 
-      echo "listing moyenne info : " .$result_moyinfo;
-            
+                 //listing moyenne  info 
+                echo "listing moyenne info : " .$result_moyinfo;
         }
     }
     if (isset($_POST['moyenne_gestionprojet'])) {
@@ -26,8 +25,8 @@
                 while ($colonne = mysqli_fetch_assoc($moyenneInf_run)){
                     $result_moygesP = $colonne['moygesP'];
         
-            //listing moyenne  gestion projet
-            echo "listing moyenne gestion projet :". $result_moygesP;
+                    //listing moyenne  gestion projet
+                    echo "listing moyenne gestion projet :". $result_moygesP;
             }
 
         }
@@ -94,8 +93,8 @@
                                                     <!-- listing des etudiants -->
 
                         <div class="card-header">
-                            <form method="POST"> 
-                                <input class="form-control col-md-9" type="search" placeholder="Search" name="rechercher">
+                            <form method="POST" class="d-inline"> 
+                                <input class="form-control mr-sm-2 w-25" type="search" placeholder="Search" name="rechercher">
                                 <button class="btn btn-outline-success" type="submit" name="recherche_annee">recherche_annee</button>
                                 <button class="btn btn-outline-success" type="submit" name="recherche_nom">recherche_nom</button>
                                 <button class="btn btn-outline-success" type="submit" name="moyenne_max">etudiantMoyenneMax</button>
