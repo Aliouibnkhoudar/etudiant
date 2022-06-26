@@ -12,9 +12,9 @@
                 $result_moyinfo = $colonne['moyinfo'];
     
       //listing moyenne  info 
+      echo "listing moyenne info : " .$result_moyinfo;
             
         }
-      echo "listing moyenne info : " .$result_moyinfo;
     }
     if (isset($_POST['moyenne_gestionprojet'])) {
 
@@ -27,9 +27,9 @@
                     $result_moygesP = $colonne['moygesP'];
         
             //listing moyenne  gestion projet
+            echo "listing moyenne gestion projet :". $result_moygesP;
             }
 
-            echo "listing moyenne gestion projet :". $result_moygesP;
         }
 
 ?>   
