@@ -39,7 +39,7 @@
                             
                             <h4>details Etudiants
                                 <a href=".//views/etudiant.view.php" class="btn btn-primary float-end">ajouter etudiant</a>
-                           <!--     <a href=".//views/filiere.view.php" class="btn btn-primary float-end">ajouter filiere</a>
+                           <!--     <a href=".//views/filiere.view.php" class="btn btn-primary float-end">ajouter filiere</a>-->
                             </h4>
                         </div>
                         <div class="card-body">
@@ -144,7 +144,7 @@
                                         <?php
                                                 }
                                             }else {
-                                                echo " ERROR :  ETUDIANT NON TROUVE";
+                                                echo " ERROR : l'etudiant du nom ". $recherche_nom ." n'existe pas";
                                             }
                                         }
                                             if (isset($_POST['recherche_annee'])) {
@@ -170,7 +170,7 @@
     
                                                     }
                                                     }else {
-                                                        echo " ERROR : ETUDIANT NON TROUVE";
+                                                        echo " ERROR : l(es)'etudiant ne(s) en ". $recherche_annee." n'existe(ent) pas";
                                                     }
                                                 }
                                                 if (isset($_POST['moyenne_max'])) {
