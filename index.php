@@ -12,7 +12,7 @@
                 $result_moyinfo = $colonne['moyinfo'];
     
                  //listing moyenne  info 
-                echo "listing moyenne info : " .$result_moyinfo;
+                    echo ' <script> alert("listing moyenne gestion projet : '.$result_moyinfo.'"); </script>';
         }
     }
     if (isset($_POST['moyenne_gestionprojet'])) {
@@ -26,7 +26,7 @@
                     $result_moygesP = $colonne['moygesP'];
         
                     //listing moyenne  gestion projet
-                    echo "listing moyenne gestion projet :". $result_moygesP;
+                    echo ' <script> alert("listing moyenne gestion projet : '.$result_moygesP.'"); </script>';
             }
 
         }
@@ -92,18 +92,43 @@
                         </div>
                                                     <!-- listing des etudiants -->
 
-                        <div class="card-header">
+                        <div class="card-header mt-5">
                             <form method="POST" class="d-inline"> 
-                                <input class="form-control mr-sm-2 w-25" type="search" placeholder="Search" name="rechercher">
-                                <button class="btn btn-outline-success" type="submit" name="recherche_annee">recherche_annee</button>
-                                <button class="btn btn-outline-success" type="submit" name="recherche_nom">recherche_nom</button>
-                                <button class="btn btn-outline-success" type="submit" name="moyenne_max">etudiantMoyenneMax</button>
-                                <button class="btn btn-outline-success" type="submit" name="classementDESC">classement</button>
-                                <button class="btn btn-outline-success" type="submit" name="moyenne_info">moyenne_info</button>
-                                <button class="btn btn-outline-success" type="submit" name="moyenne_gestionprojet">moyenne_gestionprojet</button>
-                                
-                                <div class="card-body">
-                                    
+                                <div class="form-group d-inline">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Search" name="rechercher">
+                                </div>
+                                <div class="form-group d-inline">
+                                    <button class="btn btn-outline-success mt-3" type="submit" name="recherche_annee">
+                                        recherche_annee
+                                    </button>
+                                </div>
+                                <div class="form-group d-inline">
+                                    <button class="btn btn-outline-success mt-3" type="submit" name="recherche_nom">
+                                        recherche_nom
+                                    </button>
+                                </div>
+                                <div class="form-group d-inline">
+                                    <button class="btn btn-outline-success mt-3" type="submit" name="moyenne_max">
+                                        etudiantMoyenneMax
+                                    </button>
+                                </div>
+                                <div class="form-group d-inline">
+                                    <button class="btn btn-outline-success mt-3" type="submit" name="classementDESC">
+                                        classement
+                                    </button>
+                                </div>
+                                <div class="form-group d-inline">
+                                    <button class="btn btn-outline-success mt-3" type="submit" name="moyenne_info">
+                                        moyenne_info
+                                    </button>
+                                </div>
+                                <div class="form-group d-inline">
+                                    <button class="btn btn-outline-success mt-3" type="submit" name="moyenne_gestionprojet">
+                                        moyenne_gestionprojet
+                                    </button>
+                                </div>
+
+                            <div class="card-body">
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr>
@@ -143,7 +168,7 @@
                                         <?php
                                                 }
                                             }else {
-                                                echo " ERROR : l'etudiant du nom ". $recherche_nom ." n'existe pas";
+                                                echo '<script> alert("ERROR : l\'etudiant du nom '. $recherche_nom .' n\'existe pas"); </script>';
                                             }
                                         }
                                             if (isset($_POST['recherche_annee'])) {
@@ -169,7 +194,7 @@
     
                                                     }
                                                     }else {
-                                                        echo " ERROR : l(es)'etudiant ne(s) en ". $recherche_annee." n'existe(ent) pas";
+                                                        echo '<script> alert("ERROR : l\'etudiant du nom '. $recherche_annee .' n\'existe pas"); </script>';
                                                     }
                                                 }
                                                 if (isset($_POST['moyenne_max'])) {
@@ -197,7 +222,7 @@
                                             <?php
                                                     }
                                                 }else {
-                                                    echo " ERROR : ETUDIANT NON TROUVE";
+                                                    echo '<script> alert("ERROR : ETUDIANT NON TROUVE"); </script>';
                                                 }
                                             }
                                             if (isset($_POST['classementDESC'])) {
@@ -224,7 +249,7 @@
                                                 <?php
                                                         }
                                                     }else {
-                                                        echo " ERROR : ETUDIANT NON TROUVE";
+                                                        echo '<script> alert("ERROR : ETUDIANT NON TROUVE"); </script>';
                                                     }
                                                 }
                                               
